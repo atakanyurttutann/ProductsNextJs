@@ -1,11 +1,13 @@
 import { SerachInput } from "@/ui/input/index"
 import { useEffect } from "react"
 import { SET_BASKET } from "@/redux/types"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import Link from "next/link"
 
 const Header = () => {
     const dispatch = useDispatch();
+    const { totalPrice } = useSelector(state => state.basket);
+
     const openBasket = () => {
         document.getElementById("basketCard").classList.remove("right-[-100%]")
         document.getElementById("basketCard").classList.add("right-[0]")
@@ -33,11 +35,11 @@ const Header = () => {
                     <div className="flex gap-4">
                         <div className="lg:flex hidden">
                             <i className="fa-solid fa-bag-shopping text-[24px] mr-2"></i>
-                            <span >117.000₺</span>
+                            <span >{totalPrice}₺</span>
                         </div>
                         <div data-cy={"basketOpen"} onClick={openBasket} className="lg:hidden flex cursor-pointer">
                             <i className="fa-solid fa-bag-shopping text-[24px] mr-2"></i>
-                            <span >117.000₺</span>
+                            <span >{totalPrice}₺</span>
                         </div>
                         <div className="flex">
                             <i className="fa-solid fa-user text-[24px] mr-2"></i>

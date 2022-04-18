@@ -10,7 +10,11 @@ export const basketReducer = (state = initialProps, action) => {
                 ...state,
                 basket: action?.data,
             };
-
+        case types.SET_TOTAL_PRICE:
+            return {
+                ...state,
+                totalPrice: action?.data,
+            };
         default:
             return {
                 ...state,
