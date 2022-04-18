@@ -1,0 +1,7 @@
+export const SET_PRODUCTS = "SET_PRODUCTS"
+export const SET_PRODUCT = "SET_PRODUCT"
+export const SET_MODELS = "SET_MODELS"
+export const SET_BRANDS = "SET_BRANDS"
+export const SET_FILTER = "SET_FILTER"
+export const SET_TOTAL_PAGE = "SET_TOTAL_PAGE"
+export const SET_BASKET = "SET_BASKET"
